@@ -1,0 +1,34 @@
+<!-- BEGIN bad_logins -->
+<h2>{i18n_bad_logins}</h2>
+<div>
+	<table>
+		<tr>
+			<th>{i18n_login}</th>
+			<!-- BEGIN use_real_name -->
+			<th>{i18n_user}</th>
+			<!-- END use_real_name -->
+			<th>{i18n_workstation}</th>
+			<th>{i18n_count}</th>
+		</tr>
+		<!-- BEGIN bad_logins_list -->
+		<tr>
+			<td>
+				<a href="{details_url}">
+					<span class="{user_class}">{user}</span>
+				</a>
+			</td>
+			<!-- BEGIN use_real_name2 -->
+			<td>
+				<span class="smaller">
+					<a href="{user_realname_url}" title="{user_descr}">{user_realname}</a>
+				</span>
+			</td>
+			<!-- END use_real_name2 -->
+			<td><span class="{workstation_class}">{workstation}</span></td>
+			<td>{count}</td>
+		</tr>
+		<!-- END bad_logins_list -->
+	</table>
+</div>
+<!-- END bad_logins -->
+

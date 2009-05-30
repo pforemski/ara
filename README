@@ -1,0 +1,22 @@
+ARA README file
+Dawid Ciezarkiewicz <dpc@asn.pl>
+---
+
+ARA's goal is to create simple but convenient solution for managing
+the FreeRADIUS server. ARA is PHP web-app operating on FreeRADIUS storage
+(currently only MySQL database).
+
+Look here: http://projects.asn.pl/ara and decide is it right tool for you.
+
+This project is still not very mature. Despite this it may be very usable,
+but keep in mind that it still needs usage proofs to be considered reliable.
+
+ARA has been written for our internal purposes, but with goal of public usage
+and development. Do not fear of correcting/advising us. Your (reasonable :P)
+feedback will always be appreciated. At the moment we are even looking for
+people interested in taking part in development of this project. If you're a
+PHP/FreeRADIUS hacker - don't hesitate and contact us.
+
+For installation notes read the INSTALL file.
+
+You may also want to take a look at http://projects.asn.pl/ara/ page.

@@ -1,0 +1,91 @@
+<!-- BEGIN user_stats -->
+{common_menu}
+<div>
+	<h3>{i18n_info}</h3>
+	<table>
+		<tr>
+			<th class="percent30">{i18n_groups}</th>
+			<td>{first_group_name}</td>
+		</tr>
+		<!-- BEGIN user_groups -->
+		<tr>
+			<th>&nbsp;</th>
+			<td>
+				{group_name}
+			</td>
+		</tr>
+		<!-- END user_groups -->
+	</table>
+</div>
+<div>
+	<h3>{session_type}</h3>
+	<table>
+		<tr>
+			<th class="percent30">{i18n_current_state}</th>
+			<td>{state}
+				<!-- BEGIN many_times -->
+				({times} {i18n_times})
+				<!-- END many_times -->
+				<!-- BEGIN user_killer -->
+				<form class="inline" action="{user_killer_url}" method="POST">
+					<input type="hidden" name="{value_name}" value="{value}" />
+					<input type="submit" value="{i18n_disconnect}" />
+				</form>
+				<!-- END user_killer -->
+			</td>
+		</tr>
+		<tr>
+			<th>{i18n_since}</th>
+			<td>{since} (<span class="{time_class}">{for}</span>)</td>
+		</tr>
+		<tr>
+			<th>{i18n_server}</th>
+			<td>{server}:{server_port}
+				<!-- BEGIN display_curr_nas_link -->
+				(<a href="{curr_nas_url}" title="{curr_nas_title}">{curr_nas}</a>)
+				<!-- END display_curr_nas_link -->
+			</td>
+		</tr>
+		<tr>
+			<th>{i18n_ip}</th>
+			<td>{current_ip}</td>
+		</tr>
+		<tr>
+			<th>{i18n_workstation}</th>
+			<td>{current_workstation}</td>
+		</tr>
+		<tr>
+			<th>{i18n_upload}</th>
+			<td>{current_upload}</td>
+		</tr>
+		<tr>
+			<th>{i18n_download}</th>
+			<td>{current_download}</td>
+		</tr>
+	</table>
+</div>
+<div>
+	<h3>{i18n_transfers}</h3> 
+	<table>
+		<tr>
+			<th class="percent30">&nbsp;</th>
+			<th>{i18n_daily}</th>
+			<th>{i18n_weekly}</th>
+			<th>{i18n_monthly}</th>
+		</tr>
+		<tr>
+			<th>{i18n_upload}</th>
+			<td>{daily_upload}</td>
+			<td>{weekly_upload}</td>
+			<td>{monthly_upload}</td>
+		</tr>
+		<tr>
+			<th>{i18n_download}</th>
+			<td>{daily_download}</td>
+			<td>{weekly_download}</td>
+			<td>{monthly_download}</td>
+		</tr>
+	</table>
+</div>
+
+<!-- END user_stats -->

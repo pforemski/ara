@@ -1,0 +1,50 @@
+{common_menu}
+<h2>{top_header}</h2>
+<!-- BEGIN total -->
+<h4>{i18n_total}:
+	<span class="side_note">{users_total}/{ports_total}
+	</span>
+</h4>
+<!-- END total -->
+
+
+<!-- BEGIN nas_list -->
+<div>
+	<h3 class="inline" title="{nas_ip}">
+		<a href="{nas_edit_url}">{nas_short}</a>
+		<span class="smaller">({nas_desc})</span>
+		<span class="side_note">
+			{online_no} / {ports_no}
+		</span>
+	</h3>
+	<table>
+		<tr>
+			<th class="number">#</th>
+			<th class="auto_width">{i18n_login}</th>
+			<!-- BEGIN use_real_name -->
+			<th class="auto_width">{i18n_user}</th>
+			<!-- END use_real_name -->
+			<th class="time">{i18n_time}</th>
+			<th class="ip">{i18n_ip}</th>
+			<th class="mac">{i18n_workstation}</th>
+		</tr>
+		<!-- BEGIN session_list -->
+		<tr>
+			<td>{user_no}</td>
+			<td><a href="{view_url}">{user_name}</a></td>
+			<!-- BEGIN use_real_name2 -->
+			<td>
+				<span class="smaller">
+					<a href="{user_realname_url}" title="{user_descr}">{user_realname}</a>
+				</span>
+			</td>
+			<!-- END use_real_name2 -->
+			<td>{user_time}</td>
+			<td>{user_ip}</td>
+			<td>{user_mac}</td>
+		</tr>
+		<!-- END session_list -->
+
+	</table>
+</div>
+<!-- END nas_list -->

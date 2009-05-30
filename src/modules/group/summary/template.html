@@ -1,0 +1,40 @@
+<!-- BEGIN list -->
+<h2>{i18n_groups}</h2>
+<div>
+<table>
+	<tr>
+		<th class="number">#</th>
+		<th class="auto_width">{i18n_group}</th>
+		<th class="number">{i18n_users}</th>
+	</tr>
+	<!-- BEGIN user_list -->
+	<tr>
+		<td>{no}</td>
+		<td><a href="{edit_url}">{group_name}</a></td>
+		<td>
+			<a href="{users_url}"> {user_count}</a>
+		</td>
+	</tr>
+	<!-- END user_list -->
+
+</table>
+</div>
+<!-- BEGIN ungrouped -->
+<div>
+<h3>{i18n_ungrouped}</h3>
+<table>
+	<tr>
+		<th>{i18n_users}</th>
+	</tr>
+	<!-- BEGIN ungrouped_list -->
+	<tr>
+		<td>
+			<a href="{edit_url}">{user_name}</a>
+		</td>
+
+	</tr>
+	<!-- END ungrouped_list -->
+</table>
+</div>
+<!-- END ungrouped -->
+<!-- END list -->

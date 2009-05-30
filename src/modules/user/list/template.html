@@ -1,0 +1,68 @@
+<!-- BEGIN list -->
+<!-- BEGIN search_title -->
+	<h2>{i18n_search}</h2>
+<!-- END search_title -->
+{common_menu}
+<div>
+<table>
+	<tr>
+		<th class="number">#</th>
+		<th>{i18n_login}</th>
+		<!-- BEGIN use_real_name -->
+		<th>{i18n_user}</th>
+		<!-- END use_real_name -->
+
+		<!-- BEGIN use_address -->
+		<th>{i18n_address}</th>
+		<!-- END use_address -->
+		<!-- BEGIN use_mac -->
+		<th>{i18n_workstation}</th>
+		<!-- END use_mac -->
+		<!-- BEGIN use_phone -->
+		<th>{i18n_phone} - 1</th>
+		<th>{i18n_phone} - 2</th>
+		<!-- END use_phone -->
+	</tr>
+	<!-- BEGIN user_list -->
+	<tr>
+		<td >{user_no}</td>
+		<td><a href="{view_url}">{user_name}</a></td>
+		<!-- BEGIN use_real_name2 -->
+		<td>
+			<span class="smaller">
+				<a href="{realname_url}" title="{user_descr}">{user_realname}</a>
+			</span>
+		</td>
+		<!-- END use_real_name2 -->
+		<!-- BEGIN use_address2 -->
+		<td>{user_address}</td>
+		<!-- END use_address2 -->
+		<!-- BEGIN use_mac2 -->
+		<td>{user_mac}</td>
+		<!-- END use_mac2 -->
+		<!-- BEGIN use_phone2 -->
+		<td>{user_phone1}</td>
+		<td>{user_phone2}</td>
+		<!-- END use_phone2 -->
+
+	</td>
+	</tr>
+	<!-- END user_list -->
+
+</table>
+</div>
+<div id="bottom_note">
+<p>
+{i18n_page_no}:
+<!-- BEGIN page_list -->
+&nbsp;[<a href="{page_url}">{page_no}</a>]&nbsp;
+<!-- END page_list -->
+</p>
+<p>
+{i18n_per_page}:
+<!-- BEGIN per_page_list -->
+&nbsp;[<a href="{per_page_url}">{per_page}</a>]&nbsp;
+<!-- END per_page_list -->
+</p>
+</div>
+<!-- END list -->

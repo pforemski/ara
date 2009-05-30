@@ -1,0 +1,339 @@
+/*
+ * Copyright (C) ASN http://www.asn.pl 2005
+ *               Pawel Foremski <pjf@asn.pl> 2005
+ *               Dawid Ciezarkiewicz <dpc@asn.pl> 2005
+ *
+ * This file is free software; you can redistribute it and/or 
+ * modify it under the terms of the GNU General Public License 
+ * version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	background-color: #f0f5f5;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+
+/* global defaults */
+img {
+	border: none;
+}
+
+a {
+	text-decoration: none;
+	color: #2222ff;
+}
+
+a:hover {
+	text-decoration:
+	underline;
+}
+
+a.user {
+	display: block;
+}
+
+a[accesskey]:hover:before {
+	content: "[" attr(accesskey) "]";
+}
+
+input {
+	border: 1px solid #666666;
+	background-color: #fafafa;
+	padding: 1px;
+}
+
+input.hidden {
+	border: none;
+	visibility: hidden;
+}
+
+input:hover {
+	background-color: #ffffff;
+	border: 1px solid #884444;
+}
+
+input:focus {
+	background-color: #ffffff;
+	border: 1px solid #ff0000;
+}
+
+#fixed_bar a {
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#fixed_bar a:hover {
+	color: #ffaaaa;
+}
+
+#fixed_bar {
+	position: fixed;
+	z-index: 100;
+
+	left: 0px;
+	right: 0px;
+	top: 0px;
+
+	padding: 3px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	margin: 0px;
+
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#fixed_bar a {
+	color: #ffffff;
+	font-weight: bold;
+ 	text-decoration: underline;
+}
+#fixed_bar input {
+	background-color: #cccccc;
+}
+
+#fixed_bar input:hover {
+	background-color: #f0f0f0;
+}
+
+#fixed_bar input:focus {
+	background-color: #ffffff;
+}
+
+#fixed_bar p {
+	margin: 0px;
+	padding: 0px;;
+}
+
+#fixed_bar #logo {
+	float: right; 
+}
+
+#fixed_bar p.quick_command {
+	display: inline;
+}
+
+#fixed_bar form {
+	display: inline;
+}
+
+#main_menu {
+	position: absolute;
+	top: 3em;
+
+	width: 12em;
+	margin: 1em;
+	padding: 1em;
+	border: 1px dotted #888888;
+	background-color: #fffae0;
+	text-align: right;
+}
+
+#main_menu h2 {
+	display: inline;
+}
+
+#main_page {
+	position: absolute;
+
+	left: 15em;
+	right: .1em;
+	top: 3em;
+	width: auto;
+	margin: 1em;
+	/*margin-right: 1em;*/
+	padding: 1em;
+	/*padding-top: 0em;*/
+	padding-bottom: 2em;
+
+	border: 1px dotted #888888;
+	background-color: #fffae0;
+}
+
+#main_page div.common_menu {
+	display: inline;
+}
+
+#main_page h1, #main_menu h1 {
+	text-align: center;
+}
+
+#main_menu h2 , #main_page h2 {
+	color: #f00;
+}
+
+#main_page h1 , #main_page h2, #main_page h3, #main_page h4 {
+	margin-top: 2em;
+}
+
+#main_page form p {
+	text-align: center;
+}
+
+#main_page .side_note {
+	font-size: smaller;
+	position: absolute;
+	right: 0px;
+	margin: 0px;
+	margin-right: 10px;
+	display: inline;
+}
+
+#main_page #bottom_note {
+	font-size: smaller;
+}
+
+#main_page #top_note {
+	margin: 10px;
+	text-align: center;
+}
+
+
+#main_page table {
+	font-size: x-small;
+	border-bottom: 3px solid #666666;
+	border-right: 3px solid #666666;
+	border-spacing: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 98%;
+
+	background-color: #ffffff;
+}
+
+#main_page table th {
+	padding: 7px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #7777ff;
+	color: #ffffff;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #444444;
+}
+
+#main_page table input.text {
+	width: 100%;
+	text-align: center;
+}
+
+.percent100 {
+	width: 100%;
+}
+
+.percent50 {
+	width: 50%;
+}
+
+.percent30 {
+	width: 30%;
+}
+
+.percent10 {
+	width: 10%;
+}
+
+#main_page table td {
+	border-top: 1px solid #aaaaaa;
+	border-left: 1px solid #666666;
+	padding: 7px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#main_menu ul {
+	list-style-type:none;
+	margin: 0px;
+}
+
+#main_menu ul a, #main_menu ul a.visited {
+	color: #200;
+}
+
+#main_menu h2, #main_menu h3 {
+	margin-top: 20px;
+	margin-bottom: 1px;
+}
+
+#main_page #corner_note {
+	position: absolute;
+	/*top: 0px;*/
+	float: right;
+	right: 0px;
+	margin: 10px;
+	margin-right: 2em;
+	font-style: italic;
+	display: inline;
+}
+
+#main_page #bottom_note {
+	text-align: center;
+}
+
+#main_page h2 {
+	display: inline;
+}
+
+#main_page div {
+	margin-top: 2em;
+}
+
+.warning {
+	color: #f00;
+}
+
+.inline {
+	display: inline;
+}
+
+.smaller {
+	font-size: smaller;
+}
+
+.large {
+	font-size: larger;
+}
+
+.highlight {
+	color: #090;
+}
+
+.number {
+	width: 3em;
+}
+
+.auto_width {
+	width: auto;
+}
+
+.time {
+	width: 5em;
+}
+
+.ip {
+	width: 7em;
+}
+
+.mac {
+	width: 11em;
+}
+
+.center {
+	text-align: center;
+}
+
+/* use on element being actions
+ * if action consists of two or three
+ * sub elements - use on span around them */
+.action {
+	width: 30%;
+}

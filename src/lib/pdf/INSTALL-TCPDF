@@ -1,0 +1,16 @@
+To install PDF output support in ARA download latest TCPDF
+library frome here:
+
+ http://www.tecnick.com/public/code/cp_dpage.php?aiocp_dp=tcpdf
+
+extract it to this directory so both:
+
+$ ls INSTALL-TCPDF
+$ ls tcpdf/tcpdf.php
+
+would work.
+
+Then edit:
+tcpdf/config/tcpdf_config.php
+
+If everything was right - your done.

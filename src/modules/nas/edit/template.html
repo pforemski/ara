@@ -1,0 +1,107 @@
+{common_menu}
+<!-- BEGIN edit_nas -->
+<script language="JavaScript">
+function showSecret(choose){
+	choose.style.display='none';
+	document.forms['params'].elements['secret'].style.display='block';
+	document.forms['params'].elements['secret'].style.margin="auto";
+}
+</script>
+<div>
+	<h3>{i18n_name}</h3>
+	<table>
+		<tr>
+			<th>{i18n_name}</th>
+			<th>{i18n_action}</th>
+		</tr>
+		<tr>
+			<form method="post" action="{base_form_url}">
+				<td class="center">
+					<input class="text"     type="text"   name="nas_name" value={nas_name} />
+				</td>
+				<td class="action">
+					<!-- BEGIN nas_name_changing -->
+					<select name="action" editable>
+						<option value="change_nas_name">{i18n_change}</option>
+						<option value="clone_nas">{i18n_clone}</option>
+						<option value="delete_nas">{i18n_delete}</option>
+					</select>
+					<input class="button" type="submit" value="{i18n_ok}"/>
+					<!-- END nas_name_changing -->
+					<!-- BEGIN nas_noname_changing -->
+					<span class="warning">({i18n_still_not_saved})</span>
+					<!-- END nas_noname_changing -->
+				</td>
+			</form>
+		</tr>
+	</table>
+</div>
+
+<!-- BEGIN nas_form -->
+<div>
+	<h3> {i18n_parameters} </h3>
+<table>
+	<tr>
+		<th class="percent30">&nbsp;</th>
+		<th>{i18n_value}</th>
+	</tr>
+	<form method="post" action="{base_form_url}" name="params">
+		<input class="hidden" type="hidden" name="new" value="{nas_is_new}"/>
+		<input class="hidden" type="hidden" name="action" value="change_nas"/>
+		<tr>
+			<th>{i18n_ip}</th>
+			<td>
+				<input type="text" name="nas_long_name"
+				maxlength="2048" value="{nas_long_name}" class="text" />
+			</td>
+		</tr>
+		<tr>
+			<th>{i18n_nas_type}</th>
+			<td>
+				<input type="text" name="nas_type"
+				maxlength="2048" value="{nas_type}" class="text" />
+			</td>
+		</tr>
+		<tr>
+			<th>{i18n_nas_ports}</th>
+			<td>
+				<input type="text" name="nas_ports"
+				maxlength="2048" value="{nas_ports}" class="text" />
+			</td>
+		</tr>
+		<tr>
+			<th>
+				{i18n_nas_secret}
+			</th>
+			<td>
+				<span type="label" id="sec_unhider" style="display: block"
+			   	onClick="showSecret(this);">{i18n_click_to_show}</span> 
+				<input id="secret" type="text" name="nas_secret"
+				maxlength="2048" value="{nas_secret}" style="display: none" class="text" />
+			</td>
+		</tr>
+		<tr>
+			<th>{i18n_nas_community}</th>
+			<td>
+				<input type="text" name="nas_community"
+				maxlength="2048" value="{nas_community}" class="text" />
+			</td>
+		</tr>
+		<tr>
+			<th>{i18n_nas_description}</th>
+			<td>
+				<input type="text" name="nas_description"
+				maxlength="2048" value="{nas_description}" class="text" />
+			</td>
+		</tr>
+		<tr>
+			<th>&nbsp;</th>
+			<td>
+				<input class="button action" type="submit" value="{i18n_ok}" />
+			</td>
+		</tr>
+	</form>
+</table>	
+</div>
+<!-- END nas_form -->
+<!-- END edit_nas -->

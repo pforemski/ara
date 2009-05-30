@@ -1,0 +1,65 @@
+<!-- BEGIN table_list -->
+<div>
+	<h3> {i18n_table} : {table_type} </h3>
+
+<table>
+
+	<tr>
+		<th>{i18n_attr}</th>
+		<th>{i18n_op}</th>
+		<th>{i18n_value}</th>
+		<th>{i18n_action}</th>
+	</tr>
+
+	<!-- BEGIN table_list_row -->
+	<tr>
+		<form method="post" action="{base_form_url}" name="{table_type}_row_{id}">
+			<input class="hidden" type="hidden" name="id" value="{id}"/>
+			<input class="hidden" type="hidden" name="table_type" value="{table_type}"/>
+
+			<td class="center percent50">
+				<input id="attr" type="text" name="attribute" maxlength="2048" value="{attribute}" class="text" onChange="clearCustomAttr('{table_type}_row_{id}');" />
+				<select id="customAttr" name="common_attribute" editable onChange="setAttr(this,'{table_type}_row_{id}');">
+					<!-- BEGIN common_attributes -->
+					<option value="{common_attribute}">{common_attribute}</option>
+					<!-- END common_attributes -->
+				</select>
+			</td>
+
+			<td class="center">
+				<select name="operator" editable>
+					<option value="{operator}">{operator}</option>
+					<option editable value="==">==</option>
+					<option value=":=">:=</option>
+					<option value="=">=</option>
+					<option value="+=">+=</option>
+				</select>
+			</td>
+
+			<td class="center">
+				<!-- BEGIN value_unhider -->
+				<span class="center" id="val_unhider" onClick="showValue(this,'{table_type}_row_{id}');">{i18n_click_to_show}</span> 
+				<!-- END value_unhider -->
+				<input id="value" class="autosize" style="display: {value_class}" type="text" name="value" maxlength="2048" value="{value}" class="text" />
+			</td>
+
+			<!-- BEGIN save_and_remove -->
+			<td class="center">
+				<select name="action" editable>
+					<option value="table_row_save">{i18n_save}</option>
+					<option value="table_row_delete">{i18n_delete}</option>
+				</select>
+				<input type="submit" class="button" value="{i18n_ok}"/>
+			</td>
+			<!-- END save_and_remove -->
+
+			<!-- BEGIN add -->
+			<td class="center"><input type="submit" class="button" value="{i18n_add}"/></td>
+			<input class="hidden" type="hidden" name="action" value="table_row_add"/>
+			<!-- END add -->
+		</form>
+	</tr>
+	<!-- END table_list_row -->
+</table>	
+</div>
+<!-- END table_list -->

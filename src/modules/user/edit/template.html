@@ -1,0 +1,94 @@
+<!-- BEGIN edit_user -->
+
+<script type="text/javascript">
+	function setAttr(choose, where){
+		document.forms[where].elements['attr'].value=choose.value;
+		choose.value='';
+	}
+
+function showValue(choose, where){
+	document.forms[where].elements['value'].style.display="block";
+	choose.style.display='none';
+}
+</script>
+
+{common_menu}
+
+<div>
+	<h3> {i18n_name}</h3>
+	<table>
+		<tr>
+			<th>{i18n_name}</th>
+			<th>{i18n_action}</th>
+		</tr>
+		<tr>
+			<form method="post" action="{base_form_url}">
+				<td class="center">
+					<input type="text"   name="user_name" value={user_name} />
+				</td>
+				<!-- BEGIN exists -->
+				<td class="center">
+					<select name="action" editable>
+						<!-- BEGIN allow_login_renaming -->
+						<option value="change_user_name">{i18n_change}</option>
+						<!-- END allow_login_renaming -->
+						<option value="clone_user">{i18n_clone}</option>
+						<option value="delete_user">{i18n_delete}</option>
+					</select>
+					<input class="button" type="submit" value="{i18n_ok}"/>
+				</td>
+				<!-- END exists -->
+				<!-- BEGIN exists_not -->
+				<td>
+					<span class="warning">({i18n_still_not_saved})</span>
+				</td>
+				<!-- END exists_not -->
+			</form>
+		</tr>
+	</table>
+</div>
+<!-- INCLUDE tables.html -->
+<!-- BEGIN user_groups_list -->
+<div>
+	<h3> {i18n_groups}</h3>
+	<table>
+		<tr>
+			<th>{i18n_name}</th>
+			<th>{i18n_action}</th>
+		</tr>
+		<!-- BEGIN groups_list_row -->
+		<tr>
+			<form method="post" action="{base_form_url}">
+				<td class="center percent50">
+					<select id="customAttr" name="common_group" editable >
+						<option value="{common_group}">{group_name}</option>
+						<!-- BEGIN common_groups -->
+						<option value="{common_group}">{common_group}</option>
+						<!-- END common_groups -->
+					</select>
+				</td>
+				<td class="center">
+					<!-- BEGIN save_and_remove_group_row -->
+					<select name="action" editable>
+						<option value="group_row_save">{i18n_save}</option>
+						<!-- BEGIN remove_group_row -->
+						<option value="group_row_delete">{i18n_deatach}</option>
+						<!-- END remove_group_row -->
+						<option value="group_row_edit">{i18n_edit_verb}</option>
+					</select>
+					<input class="hidden" type="hidden" name="group" value="{group_name}">
+					<input type="submit" class="button" value="{i18n_ok}" />
+					<!-- END save_and_remove_group_row -->
+					<!-- BEGIN add_group_row -->
+					<input type="submit" class="button" value="{i18n_add}" />
+					<input class="hidden" type="hidden" name="action" value="group_row_add" />
+					<!-- END add_group_row -->
+				</td>
+			</form>
+		</tr>
+		<!-- END groups_list_row -->
+	</table>
+</div>
+<!-- END user_groups_list -->
+
+<!-- END edit_user -->

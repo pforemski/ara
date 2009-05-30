@@ -1,0 +1,49 @@
+{common_menu}
+
+<div>
+	<table>
+		<form method="post" action="{base_form_url}">
+			<tr>
+				<th class="percent30" >{i18n_user}</th>
+				<td class="center">
+					<input class="percent100" type="text" name="name" value="{user_realname}" />
+				</td>
+			</tr>
+			<tr>
+				<th>{i18n_email}</th>
+				<td class="center">
+					<input class="percent100" type="text" name="email" value="{user_email}" />
+				</td>
+			</tr>
+			<tr>
+				<th>{i18n_address}</th>
+				<td class="center">
+					<input class="percent100" type="text" name="address" value="{user_address}" />
+				</td>
+			</tr>
+			<tr>
+				<th>{i18n_phone} - 1</th>
+				<td class="center">
+					<input class="percent100" type="text" name="phone1" value="{user_phone1}" />
+				</td>
+			</tr>
+			<tr>
+				<th>{i18n_phone} - 2</th>
+				<td class="center">
+					<input class="percent100" type="text" name="phone2" value="{user_phone2}" />
+				</td>
+			</tr>
+			<tr>
+				<th>{i18n_notes}</th>
+				<td class="center">
+					<textarea rows="20" class="percent100" name="notes">{user_notes}</textarea>
+				</td>
+			</tr>
+			<tr>
+				<th>&nbsp;</th>
+				<td>
+					<input type="submit" class="button" value="{i18n_ok}" />
+				</td>
+			</tr>
+		</table>
+</div>

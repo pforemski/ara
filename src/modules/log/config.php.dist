@@ -1,0 +1,27 @@
+<?php
+/*
+ * this command must give output containing only lines with "Wrong user password"
+ * format extracted from radius.log; it must do that in reasonable time
+ *
+ * XXX: Remember that you will need permissions to read radius log
+ *      probably you want to use sudo <some_external_script>
+ */
+
+$cmd = 'tail -n 1000 /tmp/radius.log | { grep "Wrong user password"; exit 0; }';
+
+/*
+ * SUDO Interface
+ * this will let you run $cmd throgh sudo as any user
+ * 
+ * secure usage example:
+ * - create new user: "foo", set him long passwd
+ * - check if http server user can use sudo to become that user
+ * - modify parameters below
+ */
+
+$run_through_sudo = FALSE;
+$sudo_path        = "/usr/bin/sudo";
+$sudo_run_as      = "foo";
+$sudo_pass        = "long_password";
+
+?>

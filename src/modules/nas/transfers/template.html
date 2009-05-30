@@ -1,0 +1,44 @@
+<!-- BEGIN nas_transfers -->
+<h2>{i18n_transfers}</h2>
+<div>
+	<table>
+		<tr>
+			<th class="number">#</th>
+			<th class="percent30">{i18n_nas}</th>
+			<th>{i18n_sessions}</th>
+			<th>{i18n_download}</th>
+			<th>{i18n_upload}</th>
+		</tr>
+		<!-- BEGIN nas_list -->
+		<tr>
+			<td>{nas_no}</td>
+			<td><a href="{nas_name_url}" title="{nas_name_title}">{nas_name}</a></td>
+			<td>{nas_active_sessions}/{nas_ports_max}</td>
+			<td>{nas_download}</td>
+			<td>{nas_upload}</td>
+		</tr>
+		<!-- END nas_list -->
+	</table>
+</div>
+<div>
+	<form method="get" action="{base_form_url}">
+		<p>
+		{i18n_limit}:
+		<input type="text" name="limit" value={limit} />
+		{i18n_days}:
+		<input type="text" name="days" value={days} />
+		{i18n_sort_by}:
+		<select name="sort-by" editable>
+			<option value="download">{i18n_download}</option>
+			<option value="upload">{i18n_upload}</option>
+		</select>
+		{i18n_reverse}:
+		<input type="checkbox" name="reverse" value="yes" />
+		<input type="hidden" name="mg" value="{current_group}" />
+		<input type="hidden" name="mm" value="{current_module}" />
+		<input type="submit" value="{i18n_ok}" />
+		</p>
+	</form>
+</div>
+
+<!-- END nas_transfers -->

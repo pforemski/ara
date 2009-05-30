@@ -1,0 +1,7 @@
+This dir stores standard extensions for sql.php library.
+
+If you want to see user personal informations in ARA you'll have to
+provide interface that will let ARA use them.
+
+As most FreeRADIUS installations comes with Dialup Admin such interface for
+DA database is made for ARA as example.

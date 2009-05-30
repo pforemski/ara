@@ -1,0 +1,30 @@
+<!-- BEGIN find -->
+<h2>{select_what}</h2>
+<div>
+	<form method="get" action="{action_url}">
+		<p>
+			<label>{i18n_find_or_create}:&nbsp;</label>
+			<input  id="module_focus" type="text" name="{item_type}" maxlength="2048" value="" class="text" />
+			<input type="submit" class="button" value="{i18n_ok}"/>
+
+		<input class="hidden" type="hidden" name="mg" value="{nmg}"/>
+		<input class="hidden" type="hidden" name="mm" value="{nmm}"/>
+		</p>
+	</form>
+
+	<form method="get" action="{action_url}">
+		<p>
+		<input class="hidden" type="hidden" name="mg" value="{nmg}"/>
+		<input class="hidden" type="hidden" name="mm" value="{nmm}"/>
+
+		<select name="{item_type}" editable onChange="this.form.submit();">
+			<option value=""></option>
+			<!-- BEGIN all -->
+			<option value="{item_name}">{item_name}</option>
+			<!-- END all -->
+		</select>
+		</p>
+	</form>
+</div>
+<!-- END find -->
+

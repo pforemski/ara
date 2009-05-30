@@ -1,0 +1,85 @@
+<h2>{top_header}</h2>
+{common_menu}
+<!-- BEGIN sessions -->
+<div>
+	<table class="smaller">
+		<tr>
+			<th>{i18n_log_in}</th>
+			<th>{i18n_time}</th>
+			<th>{i18n_login}</th>
+			<th>{i18n_upload}</th>
+			<th>{i18n_download}</th>
+			<th>{i18n_workstation}</th>
+			<th>IP</th>
+			<th>{i18n_nas}:{i18n_port}</th>
+		</tr>
+		<!-- BEGIN session_list -->
+		<tr>
+			<td><a class="smaller" href="{online_at_start_url}">{start}</a></td>
+			<td class="{time_class}">{time}</td>
+			<td><a href="{login_url}">{login}</a></td>
+			<td>{upload}</td>
+			<td>{download}</td>
+			<td><a class="smaller" href="{workstation_url}">{workstation}</a></td>
+			<td><a class="smaller" href="{ip_url}">{ip}</a></td>
+			<td><a href="{nas_url}" title="{acct_nas}, ({acct_nas_descr})">{nas_short}</a>:{port}</td>
+		</tr>
+		<!-- END session_list -->
+		<tr>
+			<td>{i18n_summary}</td>
+			<td class="{time_class}"><b>{summary_time}</b></td>
+			<td>&nbsp;</td>
+			<td><b>{summary_upload}</b></td>
+			<td><b>{summary_download}</b></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+
+	</table>
+</div>
+<div id="bottom_note">
+	<form action="./">
+		<input type="hidden" class="hidden" name="mm" value="{mm}" />
+		<input type="hidden" class="hidden" name="mg" value="{mg}" />
+		{i18n_from}:
+		<input type="text" name="from" value="{from}" />
+		{i18n_days_ago}
+		<br/>
+		{i18n_to}:
+		<input type="text" name="to" value="{to}" />
+		{i18n_days_ago}
+
+		<br/>
+		{i18n_search}:
+		<select name="search" editable>
+			<!-- BEGIN search_bar_look_for -->
+			<option value="{search}">{search}</option>
+			<!-- END search_bar_look_for -->
+		</select>
+
+		<input type="text" name="value" value="{value}" />
+		<br/>
+
+		{i18n_unique}:
+		<select name="unique" editable>
+			<!-- BEGIN search_bar_unique -->
+			<option value="{unique}">{unique}</option>
+			<!-- END search_bar_unique -->
+		</select>
+
+		<br/>
+		<select name="format" editable>
+			<option value="html">html</option>
+			<!-- BEGIN pdf_output_support -->
+			<option value="pdf">pdf</option>
+			<!-- END pdf_output_support -->
+		</select>
+		<br/>
+
+		<input type="submit"  value="{i18n_ok}"/>
+	</form>
+	
+</div>
+<!-- END sessions -->
+
