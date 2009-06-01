@@ -79,7 +79,7 @@ foreach (explode("\n", $output) as $line) {
 	/* TODO is this good? */
 
 	preg_match("/cli (.*)\)$/i", $line, $workstation);
-	preg_match("/\[(.*)\]/i", $line, $user);
+	preg_match("/\[([^\/\]]+)/i", $line, $user);
 	preg_match("/^.* :/i", $line, $date);
 
 	$date = preg_replace("/ :$/i", "", $date);

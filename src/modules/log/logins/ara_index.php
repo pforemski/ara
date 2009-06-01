@@ -59,7 +59,7 @@ foreach (explode("\n", $output) as $line) {
 	 * what do you mean: is??!! ;-) --pjf */
 
 	preg_match("/cli (.*)\)$/i", $line, $workstation);
-	preg_match("/\[(.*)\]/i", $line, $user);
+	preg_match("/\[([^\/\]]+)/i", $line, $user);
 
 	if (isset($user[1]) && $user[1] != "") {
 		if (isset($out[$user[1]][$workstation[1]]))
