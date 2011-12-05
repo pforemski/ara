@@ -190,9 +190,9 @@ else {
 		foreach ($replies as $reply) {
 			$toPrint[] = array(
 				"id" => htmlentities($reply["id"], ENT_QUOTES, "UTF-8"),
-				"attribute" => htmlentities($reply["Attribute"], ENT_QUOTES, "UTF-8"),
+				"attribute" => htmlentities($reply["attribute"], ENT_QUOTES, "UTF-8"),
 				"operator" => htmlentities($reply["op"], ENT_QUOTES, "UTF-8"),
-				"value" => htmlentities($reply["Value"], ENT_QUOTES, "UTF-8")
+				"value" => htmlentities($reply["value"], ENT_QUOTES, "UTF-8")
 			);
 		}
 
